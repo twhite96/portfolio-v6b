@@ -16,9 +16,13 @@
   padding: 0;
 }
 
+
 html,
 body {
   background-color: var(--bg);
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 body,
 input {
@@ -28,13 +32,17 @@ body {
   color: var(--fg);
   height: 100vh;
   display: grid;
-  place-items: center;
+  /* place-items: center; */
 }
 
 /* Default */
 .theme {
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 2%;
+  margin-right: 2%;
   -webkit-tap-highlight-color: transparent;
 }
 .theme__fill,
@@ -196,6 +204,22 @@ body {
 .theme__toggle-wrap {
   margin: 0 0.75em;
 }
+
+::selection {
+  background-color: #00bfff;
+  color: #000;
+}
+
+/* .container {
+  margin: 50px auto;
+  padding: 5px;
+  max-width: 650px;
+} */
+/* @media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+} */
 
 @supports selector(:focus-visible) {
   .theme__toggle:focus {
