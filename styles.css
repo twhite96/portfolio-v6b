@@ -10,10 +10,11 @@
 }
 
 * {
-  border: 0;
+  /* border: 0; */
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
+  position: relative;
 }
 
 
@@ -229,3 +230,27 @@ body {
     box-shadow: 0 0 0 0.125em var(--primary);
   }
 }
+
+#clipped-pic {
+  clip-path: circle(45%);
+  width: 350px;
+  height: 350px;
+}
+
+/* .img-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+} */
+
+/* .img-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 100%;
+} */
