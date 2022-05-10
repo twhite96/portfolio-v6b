@@ -4,9 +4,9 @@
   --hue: 223;
   --bg: hsl(var(--hue),10%,100%);
   --fg: hsl(var(--hue),10%,0%);
-  --primary: hsl(var(--hue),90%,55%);
+  /* --primary: hsl(var(--hue),90%,55%);
   --primaryT: hsla(var(--hue),90%,55%,0);
-  --transDur: 0.3s;
+  --transDur: 0.3s; */
 }
 
 * {
@@ -25,10 +25,10 @@ body {
   margin: 0;
   padding: 0;
 }
-body,
+/* body,
 input {
   font: 1em/1.5 Fredoka, sans-serif;
-}
+} */
 body {
   color: var(--fg);
   height: 100vh;
@@ -222,14 +222,14 @@ body {
   }
 } */
 
-@supports selector(:focus-visible) {
+/* @supports selector(:focus-visible) {
   .theme__toggle:focus {
     box-shadow: 0 0 0 0.125em var(--primaryT);
   }
   .theme__toggle:focus-visible {
     box-shadow: 0 0 0 0.125em var(--primary);
   }
-}
+} */
 
 #clipped-pic {
   clip-path: circle(45%);
