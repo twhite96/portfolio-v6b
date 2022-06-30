@@ -6,7 +6,7 @@ let colors = ["#00bfff", "#fc0177", "#00fb2a", "#f8b25a" ];
 (function(){
   setRandomLinkColor();
   setColorHoverListener();
-  setBioEventListener();
+  setThemeEventLister();
 
   setInterval(() => {
     setRandomLinkColor();
@@ -42,24 +42,3 @@ function setRandomLinkColor() {
 
 /* I need to handle the click event for the checkbox switch */
 
-const switchToggle = document.querySelector('#theme');
-
-function reset () {
-  window.setTimeout(() => {
-    switchToggle.innerText = '"click" me';
-  }, 2000);
-}
-
-switchToggle.addEventListener('mouseup', (e) => {
-  if (e.switchToggle === 0) {
-    switchToggle.innerText = 'MouseUp Event!';
-    reset();
-  }
-});
-
-switchToggle.addEventListener('keyup', (e) => {
-  if (e.code === 'Space' || e.code === 'Enter') {
-    switchToggle.innerText = `KeyUp Event: ${e.code}`;
-    reset();
-  }
-});
