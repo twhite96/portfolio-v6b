@@ -40,3 +40,140 @@ body {
   width: 350px;
   height: 350px;
 }
+
+
+/* Testing some buttons here
+Most of which I've ganked from
+Codepen: https://codepen.io/himalayasingh/pen/EdVzNL */
+
+/* Base Button styles */
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+.button.b2 {
+  border-radius: 2px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: rgba(255, 214, 91, .5);
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+
+/* Button 1 */
+#button-1 .knobs:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #ffd65b;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs::before {
+  content: '';
+  left: 42px;
+  background-color: #043449;
+}
+
+#button-1 .checkbox:checked ~ .layer {
+  background-color: rgba(4, 52, 73, .6);
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+/* Button 6 */
+/* #button-6 {
+  overflow: visible;
+}
+
+#button-6 .knobs:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+}
+
+#button-6 .layer,
+#button-6 .knobs,
+#button-6 .knobs:before {
+  transform: rotateZ(0);
+  transition: 0.4s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-6 .checkbox:checked + .knobs {
+  transform: rotateZ(-180deg);
+}
+
+#button-6 .checkbox:checked + .knobs:before {
+  content: "NO";
+  background-color: #f44336;
+  transform: rotateZ(180deg);
+}
+
+#button-6 .checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+  transform: rotateZ(180deg);
+} */
